@@ -1,0 +1,23 @@
+.logo-fixed {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+
+.navbar {
+    margin-left: 170px;
+}
+
+.navbar-nav {
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        margin-left: 0;
+    }
+}
