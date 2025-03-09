@@ -1,10 +1,98 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="stylefaq.css">
+</head>
+<body>
+ <div class="background-image"></div>
+    <div class="wrapper">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq">
+            <button class="accordion">
+                What is the belief behind SKS Foundation?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Empowering underpriviledged youth through sports</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                How old is SKS Foundation?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p> Second Kick Sports Foundation was established in the year 2024</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                What is the mission of SKS Foundation?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Identify potential talents in and around NCR,providing grassroots support. To facilitate
+                overall development through education,health benefits and skill training.
+                </p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                What is the source of funding for the organization?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Around 70-80% funding support of the organization comes from corporates;
+                     the rest comes from PSUs, individual donors and private institutions.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                Who all are the target beneficiaries?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Children, their families and the communities are the target groups of 
+                    SKS Foundation with children at the centre stage. </p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                How can I donate to SKS Foundation?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>You can go to Donate Now section of SKS Foundation’s website and donate online.
+                 For other donations related queries please write to secondkicksportsfoundation@gmail.com
+                </p>
+            </div>
+        </div>
 
-    </head>
-
-    <body>
-        <h1> FAQ'S PAGE</h1>
-    </body>
+    </div>
+</div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for(i = 0 ; i < acc.length ; i++)
+    {
+        acc[i].addEventListener("click", function(){
+         this.classList.toggle("active");
+         this.parentElement.classList.toggle("active");
+         var pannel = this.nextElementSibling;
+         if(pannel.style.display === "block"){
+            pannel.style.display = "none";
+         }
+         else{
+            pannel.style.display = "block";
+         }
+        });
+    }
+    </script>
+</body>
 </html>
