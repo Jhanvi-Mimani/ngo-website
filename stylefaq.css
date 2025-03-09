@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('faq1.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 50%;
+    margin-left: 5%;
+    margin-top: 10%;
+    transform: translateY(-50%);    
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.wrapper > p{
+    margin:1.5rem 0;
+    text-align: center;
+}
+.wrapper > h1{
+    letter-spacing: 3px;
+    margin: 0 0 1rem 0; 
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+
+}
+.accordion{
+    background-color:  #fff;
+    color: rgb(0,0,0,0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding:2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.accordion i{
+        font-size: 1.6rem;
+}
+.active,
+.accordion:hover{
+    background-color: #f1f7f5;
+}
+.pannel{
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: #fff;
+    overflow: hidden;
+    background-color: #f1f7f5;
+    display: none;
+}
+.pannel p{
+    color:rgba(0,0,0,0.7);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.faq{
+        border: 1px solid rgba(27, 29, 171, 0.2);
+        margin: 10px 0;
+        justify-content: left;
+}
+.faq.active{
+    border: none;
+}
+.background-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
