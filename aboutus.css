@@ -1,0 +1,128 @@
+.aboutus-bg {
+    height: 40vh;
+    background: url("images/About us.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures the image covers the entire element */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Make page scrollable */
+    overflow-x: hidden;
+}
+
+.field-container {
+    position: relative;
+    width: 100%;
+    height: 200vh; /* Ensures scrolling */
+    background: linear-gradient(white); /* Green grass field */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0px;
+}
+
+.path {
+    position: absolute;
+    width: 15px; /* Broad path */
+    height: 85%;
+    background: #3fbce2;
+    top: 3%;
+    left: 2%; /* Moved further left */
+    border-radius: 10px;
+}
+
+.football {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url('images/ball.png') no-repeat center/cover;
+    top: 3%;
+    left: calc(2% - 18px); /* Center ball exactly on path */
+    transition: top 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.milestone {
+    position: absolute;
+    width: 200px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    left: 6%; /* Moved closer to the path */
+    transform: translateY(-50%);
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.milestone-text {
+    position: absolute;
+    left: 5%;
+    right: 50%;
+    width: 93%;
+    font-size: 16px;
+    text-align: center;
+    top: 15%;
+}
+
+/* Positioning milestones */
+.milestone[data-pos="10"] { top: 4%; }
+.milestone-text[data-pos="15"] { top: 9%; }
+
+.milestone[data-pos="30"] { top: 24%; }
+.milestone-text[data-pos="35"] { top: 29%; }
+
+.milestone[data-pos="50"] { top: 44%; }
+.milestone-text[data-pos="55"] { top: 49%; }
+
+.milestone[data-pos="70"] { top: 64%; }
+.milestone-text[data-pos="75"] { top: 69%; }
+
+.milestone[data-pos="90"] { top: 84%; }
+.milestone-text[data-pos="95"] { top: 89%; }
+
+/* Highlight milestone when active */
+.milestone.active {
+    background: #3fbce2;
+    color: white;
+    transform: scale(1.1);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 0px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.stat h2 {
+    font-size: 32px;
+    color: #e91e63; /* Pink */
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.stat p {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+}
