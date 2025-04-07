@@ -1,52 +1,69 @@
-/* header.css */
-.logo-img {
-    height: 80px;
-    width: auto;
+#header-placeholder {
+    height: 100px; /* Same as your header height */
+    display: block;
+    width: 100%;
+    background-color: white;
 }
 
-.donate-button-nav {
-    margin-left: 20px;
-    background: #678cea;
-    color: #003366;
-    padding: 10px 24px;
-    border: none;
-    border-radius: 6px;
+.header-title {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
     font-weight: bold;
-    font-size: 1rem;
-    box-shadow: 0 0 12px #00ffff88;
-    transition: all 0.3s ease;
+    color: rgb(48, 99, 157);
+    text-align: center;
+    white-space: nowrap;
 }
 
-.donate-button-nav:hover {
-    background: #0099cc;
-    box-shadow: 0 0 20px #00bfffcc;
+.logo-fixed {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 159px;
+    z-index: 1100;
+}
+.donate-button {
+    position: absolute;
+    top: 30px;
+    left: 92%;
+    background: #ff2600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1200;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.donate-button:hover {
+    background: #e65c00;
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+    margin-left: 100px;
+    position: relative;
+    top: 99px;
     width: 100%;
-    background: white;
-    z-index: 999;
-    padding: 10px 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white !important;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 .navbar-nav {
-    gap: 10px;
-}
-
-.navbar-nav .nav-item {
-    margin: 0 15px;
+    background-color: white !important;
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px 20px;
-    }
-
-    .logo-img {
-        height: 60px;
+        margin-left: 0;
     }
 }
