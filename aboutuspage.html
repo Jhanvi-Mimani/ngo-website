@@ -9,6 +9,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="styleIndex.css">
+        <link rel="stylesheet" href="header.css" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
 
@@ -67,32 +68,43 @@
 
         <div class="milestone" data-pos="10">Our Story</div>
         <div class="milestone-text" data-pos="15">
-            
-            Second Kick Sports Foundation was born from a deep passion for football and a desire to give back to the community.
-            <br> Our founder, inspired by a chance encounter with a young boy asking for football lessons, started Second Kick Ghaziabad Football Club.
-            <br> What began as a small dream now has two thriving centers in Ghaziabad, providing young athletes with the opportunity to follow their passion.
-            <br>With a mission to serve those in need, the foundation was created to offer underprivileged children access to football training, life skills, and, in the future, health and educational support. We aim to empower these children, helping them reach their full potential and build a brighter future.
-           <br>Join us in giving every child the opportunity to chase their dreams, on and off the field.
-            <br><br> 
+
+            Second Kick Sports Foundation was born from a deep passion for football and a desire to give back to the
+            community.
+            <br> Our founder, inspired by a chance encounter with a young boy asking for football lessons, started
+            Second Kick Ghaziabad Football Club.
+            <br> What began as a small dream now has two thriving centers in Ghaziabad, providing young athletes with
+            the opportunity to follow their passion.
+            <br>With a mission to serve those in need, the foundation was created to offer underprivileged children
+            access to football training, life skills, and, in the future, health and educational support. We aim to
+            empower these children, helping them reach their full potential and build a brighter future.
+            <br>Join us in giving every child the opportunity to chase their dreams, on and off the field.
+            <br><br>
         </div>
 
         <div class="milestone" data-pos="30">Vision</div>
         <div class="milestone-text" data-pos="35">
-            At Second Kick Sports Foundation, we envision creating a dynamic ecosystem that nurtures the overall development
+            At Second Kick Sports Foundation, we envision creating a dynamic ecosystem that nurtures the overall
+            development
             of <br>aspiring football players,providing them with the resources and opportunities they need to excel.
             Our goal is to build a strong, supportive community that promotes
-            <br> professional football and brings long-awaited recognition and structure to the sport. 
+            <br> professional football and brings long-awaited recognition and structure to the sport.
             Through our efforts, we strive to position football as a profession
             <br> with global potential, paving the way for the next generation of football stars.
         </div>
 
         <div class="milestone" data-pos="50">Mission</div>
         <div class="milestone-text" data-pos="55">
-            Our mission is to identify and nurture football talent in and around the NCR region, offering comprehensive grassroots<br> support to help 
-            young players reach their full potential. We are committed to facilitating their growth through a well-rounded approach, 
-            <br>providing access to quality education, health benefits and skill training. By forming strategic partnerships with national and international football clubs, 
+            Our mission is to identify and nurture football talent in and around the NCR region, offering comprehensive
+            grassroots<br> support to help
+            young players reach their full potential. We are committed to facilitating their growth through a
+            well-rounded approach,
+            <br>providing access to quality education, health benefits and skill training. By forming strategic
+            partnerships with national and international football clubs,
             <br>we aim to create pathways for players to achieve success on the global stage.
-            We are also dedicated to building a thriving community that not only promotes professional football but also elevates the recognition and importance of the sport, making it a respected career choice for future generations.
+            We are also dedicated to building a thriving community that not only promotes professional football but also
+            elevates the recognition and importance of the sport, making it a respected career choice for future
+            generations.
         </div>
 
         <div class="milestone" data-pos="70">Our Goals</div>
@@ -125,7 +137,7 @@
             let docHeight = document.body.scrollHeight;
             let relativeScroll = scrollPos / (docHeight - viewportHeight);
             let closestIndex = Math.min(Math.floor(relativeScroll * positions.length), positions.length - 1);
-            
+
             let newTop = positions[closestIndex];
             let rotation = scrollPos * 3; // Rotate ball smoothly
 
@@ -141,25 +153,32 @@
                 }
             });
         });
+
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
     </script>
 
-<section class="stats-container">
-    <div class="stat">
-        <img src="team.jpg" alt="Members">
-        <h2>68,994,190</h2>
-        <p>MEMBERS</p>
-    </div>
-    <div class="stat">
-        <img src="team.jpg" alt="Actions">
-        <h2>581,826,273</h2>
-        <p>ACTIONS</p>
-    </div>
-    <div class="stat">
-        <img src="team.jpg" alt="Campaigns">
-        <h2>2,792</h2>
-        <p>CAMPAIGNS</p>
-    </div>
-</section>
+    <section class="stats-container">
+        <div class="stat">
+            <img src="team.jpg" alt="Members">
+            <h2>68,994,190</h2>
+            <p>MEMBERS</p>
+        </div>
+        <div class="stat">
+            <img src="team.jpg" alt="Actions">
+            <h2>581,826,273</h2>
+            <p>ACTIONS</p>
+        </div>
+        <div class="stat">
+            <img src="team.jpg" alt="Campaigns">
+            <h2>2,792</h2>
+            <p>CAMPAIGNS</p>
+        </div>
+    </section>
 
-    </body>
+</body>
+
 </html>
