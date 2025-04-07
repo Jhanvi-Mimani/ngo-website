@@ -4,19 +4,31 @@
     box-sizing: border-box;
 }
 
+.header-title {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(48, 99, 157);
+    text-align: center;
+    white-space: nowrap;
+}
+
 .logo-fixed {
-    position: fixed;
-    top: 10px;
-    left: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     width: 150px;
-    height: 150px;
-    z-index: 1000;
+    height: 159px;
+    z-index: 1100;
 }
 .donate-button {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    background: #ff6600;
+    position: relative;
+    top: 30px;
+    left: 92%;
+    background: #ff2600;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -33,10 +45,10 @@
 
 .navbar {
     margin-left: 100px;
-    position: fixed;
-    top: 100px;
+    position: relative;
+    top: 55px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: white !important;
     z-index: 1000;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
