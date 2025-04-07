@@ -4,12 +4,67 @@
     box-sizing: border-box;
 }
 
+.header-title {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(48, 99, 157);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.logo-fixed {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 159px;
+    z-index: 1100;
+}
+.donate-button {
+    position: relative;
+    top: 30px;
+    left: 92%;
+    background: #ff2600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.donate-button:hover {
+    background: #e65c00;
+}
+
+.navbar {
+    margin-left: 100px;
+    position: relative;
+    top: 55px;
+    width: 100%;
+    background: white !important;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.navbar-nav {
+    justify-content:space-evenly;
+    width: 100%;
+}
+
 .get-involved-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 150px 20px 50px;
+    padding: 100px 20px 50px;
 }
 .card-container {
     perspective: 1000px;
@@ -82,8 +137,10 @@
     background: #e65c00;
     color: white;
 }
+
+
 .section {
-    padding: 50px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
@@ -102,7 +159,6 @@
 .partner img {
     width: 120px;
     height: 120px;
-    object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -116,4 +172,71 @@
     margin-top: 10px;
     font-weight: bold;
     color: #333;
+}
+
+.image-size {
+    width: 500px; /* or whatever size you want */
+    height: auto;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.form-control {
+    width: 100%; /* Full width within the form, not the page */
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    padding: 0.6rem;
+    margin: 0.5rem 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    outline: 0;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.name-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.submit-button {
+    width: 70%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: o.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.radio-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.radio-options input[type="radio"] {
+    accent-color: #007bff; /* Makes them blue and round in most browsers */
+    margin-right: 0.5rem;
 }

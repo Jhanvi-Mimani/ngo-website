@@ -1,7 +1,68 @@
+.header-title {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(48, 99, 157);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.logo-fixed {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 159px;
+    z-index: 1100;
+}
+.donate-button {
+    position: relative;
+    top: 30px;
+    left: 92%;
+    background: #ff2600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.donate-button:hover {
+    background: #e65c00;
+}
+
+.navbar {
+    margin-left: 100px;
+    position: relative;
+    top: 55px;
+    width: 100%;
+    background: white !important;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        margin-left: 0;
+    }
+}
+
 .aboutus-bg {
-    margin-top: 100px;
-    height: 40vh;
-    background: url("images/About us.jpg");
+    height: 90vh;
+    background: url("images/happy faces 1.jpg");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover; /* Ensures the image covers the entire element */
@@ -26,6 +87,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 0px;
+    margin-bottom: 0;
 }
 
 .path {
@@ -66,27 +128,28 @@ body {
     position: absolute;
     left: 5%;
     right: 50%;
-    width: 93%;
-    font-size: 16px;
+    width: 90%;
+    line-height: 1.8;
+    font-size: 17px;
     text-align: center;
-    top: 15%;
+    
 }
 
 /* Positioning milestones */
 .milestone[data-pos="10"] { top: 4%; }
-.milestone-text[data-pos="15"] { top: 9%; }
+.milestone-text[data-pos="15"] { top: 8%; }
 
-.milestone[data-pos="30"] { top: 24%; }
-.milestone-text[data-pos="35"] { top: 29%; }
+.milestone[data-pos="30"] { top: 23%; }
+.milestone-text[data-pos="35"] { top: 27%; }
 
-.milestone[data-pos="50"] { top: 44%; }
-.milestone-text[data-pos="55"] { top: 49%; }
+.milestone[data-pos="50"] { top: 39%; }
+.milestone-text[data-pos="55"] { top: 44%; }
 
-.milestone[data-pos="70"] { top: 64%; }
-.milestone-text[data-pos="75"] { top: 69%; }
+.milestone[data-pos="70"] { top: 58%; }
+.milestone-text[data-pos="75"] { top: 63%; }
 
-.milestone[data-pos="90"] { top: 84%; }
-.milestone-text[data-pos="95"] { top: 89%; }
+.milestone[data-pos="90"] { top: 75%; }
+.milestone-text[data-pos="95"] { top: 80%; }
 
 /* Highlight milestone when active */
 .milestone.active {
@@ -96,6 +159,7 @@ body {
 }
 
 .stats-container {
+    z-index: 1000;
     display: flex;
     justify-content: center;
     gap: 50px;

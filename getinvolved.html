@@ -59,7 +59,7 @@
     </div>
     <div id="donate-section" class="section">
         <h2>Donate</h2>
-        <img src="images/qr.jpg" alt="QR Code for Donation">
+        <img src="images/qr.jpg" alt="QR Code for Donation" class="image-size">
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
@@ -67,25 +67,31 @@
         </form>
     </div>
     <div id="volunteer-section" class="section">
-        <h2>Volunteer</h2>
-        <p>Join us as a volunteer and make a difference.</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <button type="submit">Sign Up</button>
-        </form>
+        <h2>Volunteer / Partner with Us</h2>
+    
+        <!-- Form Container -->
+        <div class="form-wrapper">
+            <form>
+                <div class="name-fields">
+                    <input type="text" class="form-control" name="First Name" placeholder="First Name">
+                    <input type="text" class="form-control" name="Last Name" placeholder="Last Name">
+                </div>
+                <div class="radio-options">
+                    <label>
+                        <input type="radio" name="role" value="volunteer" checked>
+                        Volunteer
+                    </label>
+                    <label>
+                        <input type="radio" name="role" value="partner">
+                        Partner With Us
+                    </label>
+                </div>
+                <button type="submit" class="submit-button">Sign Up</button>
+            </form>
+        </div>
     </div>
-    <div id="partner-section" class="section">
-        <h2>Partner With Us</h2>
-
-        <form>
-            <input type="text" placeholder="Company/Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <button type="submit">Submit</button>
-        </form>
-
-    </div>
-    <h3>Our Current Partners</h3>
+    <div id="Partner-section" class="section">
+    <h2>Our Current Partners</h2>
     <div class="partners-gallery">
         <div class="partner">
             <img src="images/SKGFC.jpG" alt="Partner 1">
@@ -100,8 +106,8 @@
             <p>Company Name 3</p>
         </div>
         <div class="partner">
-            <img src="images/Drytech.jpg" alt="Partner 3">
-            <p>Company Name 3</p>
+            <img src="images/Drytech.jpg" alt="Partner 4">
+            <p>Company Name 4</p>
         </div>
     </div>
 
