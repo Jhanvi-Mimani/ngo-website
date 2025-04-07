@@ -4,48 +4,6 @@
     box-sizing: border-box;
 }
 
-.logo-fixed {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    width: 150px;
-    height: 150px;
-    z-index: 1000;
-}
-.donate-button {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    background: #ff6600;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1100;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-.donate-button:hover {
-    background: #e65c00;
-}
-
-.navbar {
-    margin-left: 100px;
-    position: fixed;
-    top: 100px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-}
-
-.navbar-nav {
-    justify-content:space-evenly;
-    width: 100%;
-}
 .get-involved-container {
     display: flex;
     flex-wrap: wrap;
