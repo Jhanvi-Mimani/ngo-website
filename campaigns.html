@@ -9,8 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="stylecampaigns.css">
         <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="stylefooter.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -82,16 +84,7 @@
         </div>
         <button class="arrow arrow-right" onclick="moveGallery(1)">&#10095;</button>
     </section>
-
-    
-    <div class="cta-section">
-        <div class="cta-overlay"></div>
-        <div class="cta-content">
-            <h2>Make an Impact Today!</h2>
-            <p>Your support helps us nurture young talent, provide education, and build a brighter future through sports.</p>
-            <button class="cta-button" onclick="window.location.href='getinvolved.html'">Get Involved Now</button>
-        </div>
-    </div>
+    <div id="footer-placeholder"></div>
     <script>
         let index = 0;
         function moveGallery(direction) {
@@ -108,6 +101,12 @@
             .then(data => {
                 console.log("Index Header loaded!");
                 document.getElementById('header-placeholder').innerHTML = data;
+            });
+            
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
             });
     </script>
 </body>
