@@ -9,7 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styleachievements.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="stylefooter.css" />
@@ -22,9 +23,13 @@
         <div class="overlay"></div>
         <div class="content">
             <h1>Our Achievements</h1>
-            <p>At <strong>Second Kick Sports Foundation</strong>, every tournament is a journey of passion and perseverance. Over the years, our teams have showcased their talent, earning victories and inspiring many. Scroll down to relive our proudest moments. 
-                We take pride in the dedication and sportsmanship of our players, who continue to push boundaries and achieve new milestones. 
-                Every achievement fuels our mission to develop young talent and create opportunities for aspiring athletes.</p>
+            <p>At <strong>Second Kick Sports Foundation</strong>, every tournament is a journey of passion and
+                perseverance. Over the years, our teams have showcased their talent, earning victories and inspiring
+                many. Scroll down to relive our proudest moments.
+                We take pride in the dedication and sportsmanship of our players, who continue to push boundaries and
+                achieve new milestones.
+                Every achievement fuels our mission to develop young talent and create opportunities for aspiring
+                athletes.</p>
         </div>
     </section>
     <section class="achievements">
@@ -33,19 +38,19 @@
             <p>🏆 1st Place | Prize: $5000</p>
             <img src="tournament1.jpg" alt="Champions Trophy 2024">
         </div>
-        
+
         <div class="tournament">
             <h2>National Youth Cup 2023</h2>
             <p>🥈 2nd Place | Prize: $3000</p>
             <img src="tournament2.jpg" alt="National Youth Cup 2023">
         </div>
-        
+
         <div class="tournament">
             <h2>Regional League Finals 2022</h2>
             <p>🥇 1st Place | Prize: $4000</p>
             <img src="tournament3.jpg" alt="Regional League Finals 2022">
         </div>
-    </section>  
+    </section>
     <div id="footer-placeholder"></div>
     <script>
         fetch('header.html')
@@ -54,7 +59,7 @@
                 console.log("Index Header loaded!");
                 document.getElementById('header-placeholder').innerHTML = data;
             });
-        
+
         fetch('footer.html')
             .then(response => response.text())
             .then(data => {

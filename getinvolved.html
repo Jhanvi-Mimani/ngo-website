@@ -8,7 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="stylegetinvolved.css">
     <link rel="stylesheet" href="stylefooter.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
@@ -54,23 +55,36 @@
                 </div>
                 <div class="card-back">
                     <p>Join hands with us to empower young athletes and students with better opportunities.</p>
-                    <button onclick="location.href='#partner-section'">Partner with US</button>
+                    <button onclick="location.href='#volunteer-section'">Partner with US</button>
                 </div>
             </div>
         </div>
     </div>
-    <div id="donate-section" class="section">
-        <h2>Donate</h2>
-        <img src="images/qr.jpg" alt="QR Code for Donation" class="image-size">
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <button type="submit">Donate</button>
+
+    <section id="donate-section" class="donation-box">
+        <h2>Support US</h2>
+
+        <form id="donationForm" class="donate-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="tel" placeholder="Phone Number" required />
+            <textarea placeholder="Your Message" rows="4"></textarea>
+
+            <button type="button" class="donate-btn" onclick="revealQR()">Donate Now</button>
         </form>
-    </div>
+
+        <!-- Hidden QR section -->
+        <div id="qrBox" class="qr-section hidden">
+            <h3>Thank you for choosing to donate! 🙏</h3>
+            <img src="images/qr1.jpg" alt="Scan QR to Donate" class="qr-img" />
+            <p>Scan the QR code above to complete your donation.</p>
+            <canvas id="confetti-canvas"></canvas>
+        </div>
+    </section>
+
     <div id="volunteer-section" class="section">
         <h2>Volunteer / Partner with Us</h2>
-    
+
         <!-- Form Container -->
         <div class="form-wrapper">
             <form>
@@ -93,39 +107,56 @@
         </div>
     </div>
     <div id="Partner-section" class="section">
-    <h2>Our Current Partners</h2>
-    <div class="partners-gallery">
-        <div class="partner">
-            <img src="images/SKGFC.jpG" alt="Partner 1">
-            <p>Company Name 1</p>
+        <h2>Our Current Partners</h2>
+        <div class="partners-gallery">
+            <div class="partner">
+                <img src="images/SKGFC.jpG" alt="Partner 1">
+                <p>Second Kick Ghaziabad FC</p>
+            </div>
+            <div class="partner">
+                <img src="images/LCPC.jpg" alt="Partner 2">
+                <p>Legal Care Pharma Consultancy</p>
+            </div>
+            <div class="partner">
+                <img src="images/SAA Capital management.jpg" alt="Partner 3">
+                <p>SAA Capital Management</p>
+            </div>
+            <div class="partner">
+                <img src="images/Drytech.jpg" alt="Partner 4">
+                <p>Drytech Speciality</p>
+            </div>
         </div>
-        <div class="partner">
-            <img src="images/LCPC.jpg" alt="Partner 2">
-            <p>Company Name 2</p>
-        </div>
-        <div class="partner">
-            <img src="images/SAA Capital management.jpg" alt="Partner 3">
-            <p>Company Name 3</p>
-        </div>
-        <div class="partner">
-            <img src="images/Drytech.jpg" alt="Partner 4">
-            <p>Company Name 4</p>
-        </div>
-    </div>
-    <div id="footer-placeholder"></div>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            });
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
-    </script>
+        <div id="footer-placeholder"></div>
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+
+            function revealQR() {
+                const qrBox = document.getElementById("qrBox");
+                qrBox.classList.remove("hidden");
+
+                // Fire confetti 🎉
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+
+                // Scroll to QR smoothly
+                qrBox.scrollIntoView({ behavior: "smooth" });
+            }
+        </script>
 </body>
 
 </html>
