@@ -11,7 +11,8 @@ body {
     background-size: cover;
     height: 100vh;
     width: 100%;
-    position: relative;
+    position:relative;
+
     /* ❌ remove display: flex, justify-content, align-items */
 }
 .wrapper{
@@ -26,6 +27,8 @@ body {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 90vh; 
+    overflow-y: auto; 
 
 }
 .wrapper > p{
